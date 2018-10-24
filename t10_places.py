@@ -1,6 +1,6 @@
 ######################################################################
-# Author: Emily Lovell & Scott Heggen      TODO: Change this to your names
-# Username: lovelle & heggens             TODO: Change this to your usernames
+# Author: Will Pratt & Bryan Epperson      TODO: Change this to your names
+# Username: prattw, eppersonb             TODO: Change this to your usernames
 #
 # Assignment: T10: Oh, the Places You'll Go!
 #
@@ -95,11 +95,14 @@ def extract_place(file_content):
     # TODO   Once you've got the code working for all five lines, add a conditional that checks to see if
     # TODO   the line starts with a #; if it does, ignore that line.
 
-    name = file_content.readline().strip("\n")
+    name = file_content.readline().strip("Bryan")
+    latitude = file_content.readline().strip("37.170610")
+    longitude = file_content.readline().strip("-82.635780")
+    color = file_content.readline().strip("orange")
 
     # FIXME Construct a tuple with all five values in the correct order. Don't forget types, and tuples are immutable!
     # Example: place_tuple = ("Scott's example", "Somewhere special", 41, -10, "black")
-    place_tuple = (name, )      # Finish assembling the tuple!
+    place_tuple = (name, latitude, longitude, color)      # Finish assembling the tuple!
     return place_tuple
 
 
